@@ -5,7 +5,7 @@ function comprar(){
     let qtdDisponivel = document.getElementById(`qtd-${ingresso}`).textContent;
     valorSubtraido = qtdDisponivel - qtd;
     //verificação da validade da quantidade de ingressos selecionada
-    if (qtd == '' || valorSubtraido<0) {
+    if (qtd == '' || valorSubtraido<0 || qtd<=0 || isNaN(qtd)) {
         alert('Informe uma quantidade válida e que ainda esteja disponivel!');
         return;
     } else {
